@@ -43,3 +43,12 @@ arr1 = [1, 2, 2, 3, 4]
 arr2 = [2, 3, 5, 6]
 a=findUnion(arr1,arr2)
 print(a)
+
+###############################
+# insted of duplicate logic we can use this in inside the if condition if i < m and j < n:
+
+#like this
+# if arr1[i] <= arr2[j]:  # Case 1 and 2
+#     if len(result) == 0 or result[-1] != arr1[i]:
+#         result.append(arr1[i])
+#     i += 1
