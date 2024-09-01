@@ -1,13 +1,20 @@
-def twosu(nums,target):
+def SortArry(nums):
     n=len(nums)
-    hash_map={}
-    for i in range(n):
-        if target-nums[i] in hash_map:
-            return [hash_map[target-nums[i]],i]
+    low=mid=0
+    high=n-1
+    while mid<=high:
+        if nums[mid]==0:
+            nums[low],nums[mid]=nums[mid],nums[low]
+            low+=1
+            mid+=1
+        elif nums[mid]==1:
+            mid+=1
         else:
-            hash_map[nums[i]]=i
+            nums[mid],nums[high]=nums[high],nums[mid]
+            high-=1
+    return nums
+
         
 
-arr=[2,3,7,3]
-target=9
-print(twosu(arr,target))
+arr=[0,1,0,2,0,2]
+print(SortArry(arr))

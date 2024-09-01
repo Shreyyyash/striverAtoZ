@@ -21,4 +21,23 @@ def SortArry(nums):
     return nums
     
 arr=[2,0,2,1,1,0]
+# arr=[0,1,0,2,0,2]
 print(SortArry(arr))
+
+# count1=0
+# count2=0
+# count3=0
+# for i in nums:
+#     if i==0:
+#         count1+=1
+#     elif i==1:
+#         count2+=1
+#     else:
+#         count3+=1
+        
+# for i in range(count1):
+#     nums[i]=0
+# for i in range(count1,count1+count2):
+#     nums[i]=1
+# for i in range(count1+count2,len(nums)):
+#     nums[i]=2
