@@ -1,20 +1,19 @@
-def SortArry(nums):
-    n=len(nums)
-    low=mid=0
-    high=n-1
-    while mid<=high:
-        if nums[mid]==0:
-            nums[low],nums[mid]=nums[mid],nums[low]
-            low+=1
-            mid+=1
-        elif nums[mid]==1:
-            mid+=1
-        else:
-            nums[mid],nums[high]=nums[high],nums[mid]
-            high-=1
-    return nums
+def removeDuplicates(nums):
+    """
+    :type nums: List[int]
+    :rtype: int
+    """
+    count=1
+    for i in range(1,len(nums)):
+        if nums[i]!=nums[i-1]:
+            count+=1
+    
+    return count
 
-        
 
-arr=[0,1,0,2,0,2]
-print(SortArry(arr))
+nums = [1, 1, 2, 3, 3, 4, 5, 5, 6]
+
+length = removeDuplicates(nums)
+print("New length:", length)
+# print("Array after removing duplicates:", nums[:length])
+
