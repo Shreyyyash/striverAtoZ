@@ -3,14 +3,21 @@
 def maxSubArray(nums):
     n=len(nums)
     sum=0
+    start=end=pointer=0
     total_sum = nums[0]
     for i in range(n):
+        if sum==0:
+            pointer=i
         sum=sum+nums[i]
-        total_sum=max(total_sum,sum)
+        if sum>total_sum:
+            total_sum=sum
+            start=pointer
+            end=i
         if sum < 0:
             sum = 0
+
        
-    return total_sum
+    return total_sum,nums[start:end+1]
     
 
 nums=[-2,1,-3,4,-1,2,1,-5,4]
