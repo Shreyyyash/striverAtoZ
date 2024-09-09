@@ -1,7 +1,7 @@
 def nextPermutation(nums):
     n=len(nums)
     i=n-2
-    # Find first element from the right that is not in decreasing order; here nums[1]
+    # Find the first element from the right that breaks the increasing sequence; here nums[1]
     while i>=0 and nums[i]>=nums[i+1]:
         i-=1
     
