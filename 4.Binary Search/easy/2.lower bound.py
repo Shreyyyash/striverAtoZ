@@ -10,10 +10,10 @@ def lowerBound(nums, n, target):
             high=mid-1
         
         else:
-            ans=mid
             low=mid+1
+            ans=low
     return ans
 
-nums=1,2,8,10,11,12,19
-target=5
+nums=[1,2,8,10,11,12,19]
+target=13
 print(lowerBound(nums,len(nums),target))
