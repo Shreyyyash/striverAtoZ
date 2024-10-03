@@ -20,7 +20,7 @@ def nextPermutation(nums):
 
     
 # nums=[1,2,3]
-nums=[2,1,5,4,3,0,0]
+nums=[4,5,3,5,6,2,1]
 # nums=[2,2,4,5,0,2,4]
 a=nextPermutation(nums)
 print(a)

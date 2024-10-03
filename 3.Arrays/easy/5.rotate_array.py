@@ -13,6 +13,11 @@
 #     for i in range(n):
 #         arr2.append(arr[(i-pos)%n])
 #     return arr2
+#       another approach
+        # rotated = [0] * n
+        # for i in range(n):
+        #     rotated[(i + k) % n] = nums[i]
+
 
 # without using extra space : Leetcode 189
 def right_rotate(nums,k):
