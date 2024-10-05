@@ -10,8 +10,8 @@ def lowerBound(nums, n, target):
             high=mid-1
         
         else:
+            ans=mid
             low=mid+1
-            ans=low
     return ans
 
 nums=[1,2,8,10,11,12,19]
