@@ -4,20 +4,32 @@
 # Conversely, if the target does exist in the sorted half, we eliminate the other half.
 
 def search(nums,target):
-    nums.sort()
     n=len(nums)
-    low,high=0,n-1
-    pivot=0
+    left,right=0,n-1
+
+    while left<=right:
+        mid=(left+right)//2
+        if target==nums[mid]:
+            return mid
+        
+        # Check if the left half is sorted
+        if nums[left]<=nums[mid]:
+            # If target is in the left sorted half
+            if nums[left]<=target<nums[mid]:
+                right=mid-1
+            else:
+                left=mid+1
+        
+        # Else, the right half must be sorted
+        elif nums[mid]<nums[right]:
+            # If target is in the right sorted half
+            if nums[mid]<target<=nums[right]:
+                left=mid+1
+            else:
+                right=mid-1
     
-    while low<=high:
-        mid=(low+high)//2
-        if nums[mid]==target:
-            pivot=mid
-        elif target < nums[mid]:
-            low = mid+1
-        else:
-            high = mid-1
-    return pivot
+    return -1
+    
 
 
 nums = [4,5,6,7,8,0,1,2]
