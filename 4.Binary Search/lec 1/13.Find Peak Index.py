@@ -6,18 +6,15 @@ class Solution(object):
         :rtype: int
         """
         n = len(nums)
-        
-        # If the array has only one element, it's a peak
+      
         if n == 1:
             return 0
         
-        # Check if the first element or last element is the peak
         if nums[0] > nums[1]:
             return 0
         if nums[n - 1] > nums[n - 2]:
             return n - 1
-
-        # Binary search from the second element to the second-last element
+        
         left, right = 1, n - 2
         while left <= right:
             mid = (left + right) // 2
