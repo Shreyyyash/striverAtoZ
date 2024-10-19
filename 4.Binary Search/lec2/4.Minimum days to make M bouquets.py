@@ -20,7 +20,7 @@ class Solution:
             if bouquets>=m:
                 return True
         
-        return bouquets >= m
+        return False
     
     def minDays(self,bloomDay,m,k):
         no_of_flowers = len(bloomDay)
